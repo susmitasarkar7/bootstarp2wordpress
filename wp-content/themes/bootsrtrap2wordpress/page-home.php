@@ -3,6 +3,9 @@
     Template Name: Home Page
  */
 
+
+
+
 get_header();
 ?>
 
@@ -18,8 +21,8 @@ get_header();
     				</div><!-- col -->
 		    		
 		    		<div class="col-sm-7 hero-text">
-			    		<h1>Bootstrap to WordPress</h1>
-			            <p class="lead">Earn An Extra $1k - $5k a Month by Learning to Code Your Very Own Responsive &amp; Custom WordPress Websites with Bootstrap</p>
+			    		<h1><?php bloginfo('name') ?></h1>
+			            <p class="lead"><?php bloginfo('description') ?></p>
 			            
 			            <div id="price-timeline">
 			            	<div class="price active">
