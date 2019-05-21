@@ -36,7 +36,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<!-- <?php bootsrtrap2wordpress_post_thumbnail(); ?> -->
+	<?php bootsrtrap2wordpress_post_thumbnail(); ?>
 
 		<?php if( has_post_thumbnail() ) { //check for feature image ?>
 
