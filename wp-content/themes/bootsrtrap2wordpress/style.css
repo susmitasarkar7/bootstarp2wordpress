@@ -734,10 +734,18 @@ section.main-content {
 }
 
 .feature-image h1 {
-	display: table-cell;
+	/* display: table-cell; */
+	display: block;
 	vertical-align: middle;
 	text-align: center;
 	color: white;
+}
+
+.archive-description p {
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 2rem;
 }
 
 #optin {
