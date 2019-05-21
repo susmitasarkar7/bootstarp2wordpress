@@ -36,8 +36,6 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php bootsrtrap2wordpress_post_thumbnail(); ?>
-
 		<?php if( has_post_thumbnail() ) { //check for feature image ?>
 
 			<div class="post-image">
@@ -50,7 +48,4 @@
 			<?php the_excerpt(); ?>
 		</div><!-- post-excerpt -->
 
-	<footer class="entry-footer">
-		<?php bootsrtrap2wordpress_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -901,8 +901,8 @@ footer li.signup-link a:hover {
 	font-size: 24px;
 }
 
-.post-image {
-	height: 300px;
+.post-image img {
+	height: auto;
 }
 
 .post-details {
