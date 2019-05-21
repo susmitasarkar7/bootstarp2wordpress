@@ -44,8 +44,8 @@
 
 		<?php } ?>
 
-		<div class="post-excerpt">
-			<?php the_excerpt(); ?>
-		</div><!-- post-excerpt -->
+		<div class="post-body">
+            <?php echo strip_tags($post->post_content, '<br>'); ?>
+		</div><!-- the-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
