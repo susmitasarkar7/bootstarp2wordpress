@@ -37,18 +37,18 @@
 				<p><a href="/"><img src="<?php bloginfo('stylesheet_directory')?>/assets/img/logo.png" alt="Bootstrap to WordPress"></a></p>
 			</div><!-- end col -->
 			<div class="col-sm-6">
-				<nav>
-					<ul class="list-unstyled list-inline">
-						<li><a href="">Home</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Resources</a></li>
-						<li><a href="">Contact</a></li>
-						<li class="signup-link"><a href="">Sign up now</a></li>
-					</ul>
-				</nav>
+					<?php 
+						wp_nav_menu(array(
+							
+							'theme-location' => 'footer',
+							'container' => 'nav',
+							'menu_class' => 'list-unstyled list-inline'
+
+						));
+					?>
 			</div><!-- end col -->
 			<div class="col-sm-3">
-				<p class="pull-right">&copy; 2014 Brad Hussey</p>
+				<p class="pull-right"><?php bloginfo('name'); ?> &copy; <?php echo date('Y') ?> <?php the_author_link();?></p>
 			</div><!-- end col -->
 		</div><!-- container -->
 	</footer>
