@@ -69,6 +69,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ## Menus
 --------------------------------------------------------------*/
 
+a { outline: none !important; }
+
 .navbar-nav > li.current_page_item a,
 .navbar-nav > li.current_page_parent a {
 	color: #fff;
