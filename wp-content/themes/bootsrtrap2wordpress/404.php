@@ -10,51 +10,61 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section class="feature-image feature-image-default-alt" data-type="background" data-speed="2">
+    <h1>Bummer! That page can't be found.</h1>
+</section>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bootsrtrap2wordpress' ); ?></h1>
-				</header><!-- .page-header -->
+	<div class="contanier">
+		<div id="primary" class="row">
+			<main class="content col-sm-8">
+				<div class="error-404 not-found">
+					<div class="page-content">
+						<h2>Don't fret! Let's get you back on track.</h2>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bootsrtrap2wordpress' ); ?></p>
+						<!--Resources
+						======================================-->
+						<h3>Resources</h3>
+						<p>Perhaps you were looknig for a specific resource?</p>
 
-					<?php
-					get_search_form();
+						<div class="resource-row clearfix">
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
+						<?php while($loop-> have_posts()) : $loop-> the_post(); ?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bootsrtrap2wordpress' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-							?>
-						</ul>
-					</div><!-- .widget -->
+						<?php
 
-					<?php
-					/* translators: %1$s: smiley */
-					$bootsrtrap2wordpress_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'bootsrtrap2wordpress' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$bootsrtrap2wordpress_archive_content" );
+							$resource_image = get_field('resource_image');
+							$resource_url   = get_field('resource_url');
+							$button_text    = get_field('button_text');
 
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+						?>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+						<div class="resource">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+							<img src="<?php echo $resource_image['url']; ?>" alt="<?php echo $resource_image['alt']; ?>">                        
+							<!-- <?php echo $resource_image; ?> -->
+							<h3><a href="<?php echo $resource_url; ?>"><?php the_title(); ?></a></h3>
+							<?php the_content(); ?>
+							<?php if (!empty($button_text)): ?>
+							<a href="<?php echo $resource_url; ?>" class="btn btn-success"><?php echo $button_text; ?></a>
+							<?php endif; ?>
+						</div>
+
+						<?php endwhile; ?>
+
+						</div>
+
+					</div>
+				</div>
+			</main>
+
+			<!---Sidebar
+			======================================-->
+			<aside class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</aside>
+
+		</div>
+	</div>
 
 <?php
 get_footer();
