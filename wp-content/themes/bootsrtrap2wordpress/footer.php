@@ -94,7 +94,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="<?php bloginfo(template_directory); ?>/assets/js/jquery-2.1.1.min.js"></script>
-<script src="<?php bloginfo(template_directory); ?>/assets/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <script src="<?php bloginfo(template_directory); ?>/assets/js/main.js"></script>
 

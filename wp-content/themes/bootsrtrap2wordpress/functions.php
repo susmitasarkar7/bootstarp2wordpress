@@ -177,3 +177,15 @@ function new_excerpt_more($more) {
 	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+//Register Nav Walker class_alias
+require_once('class-wp-bootstrap-navwalker.php');
+
+if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+	// file does not exist... return an error.
+	return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+} else {
+	// file exists... require it.
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}

@@ -64,10 +64,17 @@
 					<?php 
 						wp_nav_menu(array(
 							
-							'theme-location' => 'primary',
-							'container' => 'nav',
-							'container_class' => 'navbar-collaspe collaspe',
-							'menu_class' => 'nav navbar-nav navbar-right'
+							// 'theme-location' => 'primary',
+							// 'container' => 'nav',
+							// 'container_class' => 'navbar-collaspe collaspe',
+							// 'menu_class' => 'nav navbar-nav navbar-right'
+							'theme-location'  => 'primary',
+							'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+							'container'       => 'div',
+							'container_class' => 'collapse navbar-collapse',
+							'menu_class'      => 'nav navbar-nav navbar-right',
+							'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+							'walker'          => new WP_Bootstrap_Navwalker(),
 
 						));
 					?>
