@@ -40,6 +40,7 @@
 					<?php 
 						wp_nav_menu(array(
 							
+							'menu'           => 'Footer Menu',
 							'theme-location' => 'footer',
 							'container' => 'nav',
 							'menu_class' => 'list-unstyled list-inline'

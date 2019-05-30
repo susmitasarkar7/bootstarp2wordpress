@@ -68,6 +68,7 @@
 							// 'container' => 'nav',
 							// 'container_class' => 'navbar-collaspe collaspe',
 							// 'menu_class' => 'nav navbar-nav navbar-right'
+							'menu'           => 'Main Menu',
 							'theme-location'  => 'primary',
 							'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
 							'container'       => 'div',
